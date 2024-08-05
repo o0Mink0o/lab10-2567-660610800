@@ -58,7 +58,7 @@ export default function RandomUserPage() {
       {isLoading && (
         <p className="display-6 text-center fst-italic my-4">Loading ...</p>
       )}
-      {users && !isLoading && users.map((user) => <UserCard {...user}/>)}
+      {users && !isLoading && users.map((user, index) => (<UserCard key = {index} {...user} />))}
     </div>
   );
 }
